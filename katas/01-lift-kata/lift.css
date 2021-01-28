@@ -1,0 +1,60 @@
+html {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #126482
+}
+
+button {
+    background-color: #198CB5;
+    color: aliceblue;
+    font-size: 0.7rem;
+    padding: 8px;
+    width: 100px;
+    border: 2px solid #126482;
+    border-radius: 10px;
+}
+
+.floors {
+    display: grid;
+    gap: 0.5em;
+    height: 80vh;
+    width: 40vh;
+    min-height: 600px;
+    min-width: 260px;
+    border: 1px solid #198CB5;
+    margin: 0 auto;
+    padding: 0.8em;
+}
+
+.floor {
+    display: flex;
+    align-items: center;
+}
+
+.floor-info {
+    flex-grow: 1;
+}
+
+.lift-image {
+    width: 45%;
+}
+
+.to-floor-3 {
+    transition: all 1s;
+    transform: translateY(-19.9em);
+}
+
+.to-floor-2 {
+    transition: all 1s;
+    transform: translateY(-13.3em);
+}
+
+.to-floor-1 {
+    transition: all 1s;
+    transform: translateY(-7em);
+}
+
+.to-floor-0 {
+    transition: all 1s;
+    transform: translateY(0em);
+}
