@@ -39,22 +39,22 @@ button {
     width: 45%;
 }
 
-.to-floor-3 {
+.floor3 {
     transition: all 1s;
     transform: translateY(-19.9em);
 }
 
-.to-floor-2 {
+.floor2 {
     transition: all 1s;
     transform: translateY(-13.3em);
 }
 
-.to-floor-1 {
+.floor1 {
     transition: all 1s;
     transform: translateY(-7em);
 }
 
-.to-floor-0 {
+.floor0 {
     transition: all 1s;
     transform: translateY(0em);
 }
