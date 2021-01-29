@@ -1,11 +1,13 @@
 const lift = document.querySelector('.lift');
 const callButtons = document.querySelectorAll('button');
 const liftPannels = document.querySelectorAll('.lift-pannel');
+const liftImage = document.querySelector('.lift-image');
 const audio = new Audio('lift-arrived.mp3');
 
 let liftFloor = 0;
 
 function goToFloor(floorNumber) {
+    liftImage.src = 'lift-doors-closed.jpg'
     const classesToRemove = ['floor0', 'floor1', 'floor2', 'floor3'];
     lift.classList.remove(...classesToRemove);
     lift.classList.add(`floor${floorNumber}`);
@@ -13,11 +15,12 @@ function goToFloor(floorNumber) {
 }
 
 function liftArrivedToFloor() {
-    setLiftFloor();
+    updateFloorPannel();
+    liftImage.src = 'lift-doors-opened.jpg';
     audio.play();
 }
 
-function setLiftFloor() {
+function updateFloorPannel() {
     liftPannels.forEach(liftPannel => liftPannel.innerHTML = `Lift in floor ${liftFloor}`);
 }
 
@@ -27,4 +30,4 @@ callButtons.forEach(callButton => {
 
 window.addEventListener('transitionend', liftArrivedToFloor);
 
-setLiftFloor();
+updateFloorPannel();
